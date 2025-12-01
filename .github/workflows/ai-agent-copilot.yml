@@ -55,7 +55,7 @@ jobs:
               repo: context.repo.repo,
               title: `${issueKey}: ${summary}`,
               body: `## AI Task from Jira
-              
+
 **Jira Issue:** [${issueKey}](https://${process.env.JIRA_DOMAIN}/browse/${issueKey})
 
 **Description:**

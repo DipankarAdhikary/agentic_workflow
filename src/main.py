@@ -36,7 +36,9 @@ def main():
         print(f"Issue Description found: {len(issue_details.get('description', ''))} chars")
 
         # 2. Setup Git Branch
-        branch_name = f"feature/{args.issue_key}"
+        import time
+        timestamp = int(time.time())
+        branch_name = f"feature/{args.issue_key}-{timestamp}"
         print(f"Creating branch: {branch_name}")
         github_client.create_branch(branch_name)
 

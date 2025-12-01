@@ -61,7 +61,7 @@ jobs:
 **Description:**
 ${descriptionText || summary}
 
----
+***
 
 ### Instructions:
 1. Click "Open in Copilot Workspace" (if available)

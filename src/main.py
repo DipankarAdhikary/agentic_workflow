@@ -27,7 +27,7 @@ def main():
         installation_id=os.environ.get('INSTALLATION_ID')
     )
     
-    ai_engine = AIEngine(api_key=os.environ.get('GITHUB_MODELS_TOKEN'))
+    ai_engine = AIEngine(api_key=os.environ.get('AI_MODEL_TOKEN'))
 
     try:
         # 1. Get Full Issue Details

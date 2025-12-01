@@ -1,1 +1,1 @@
-Readme file updated by Jira Automation Workflow.
+Readme file updated by Jira Automation Workflow using only GitHub Copilot Workspace and no python agent.

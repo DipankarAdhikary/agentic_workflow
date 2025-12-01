@@ -48,33 +48,6 @@ jobs:
               };
               descriptionText = extractText(description);
             }
-            
-            // Create GitHub Issue
-            const issue = await github.rest.issues.create({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              title: `${issueKey}: ${summary}`,
-              body: `## AI Task from Jira
-
-**Jira Issue:** [${issueKey}](https://${process.env.JIRA_DOMAIN}/browse/${issueKey})
-
-**Description:**
-${descriptionText || summary}
-
-***
-
-### Instructions:
-1. Click "Open in Copilot Workspace" (if available)
-2. Review the AI-generated changes
-3. Commit and create a PR
-
-**Note:** This issue was automatically created from Jira.`,
-              labels: ['ai-task', 'jira-sync']
-            });
-            
-            console.log(`Created issue: ${issue.data.html_url}`);
-            
-            // Comment on Jira ticket
             await fetch(
               `https://${process.env.JIRA_DOMAIN}/rest/api/3/issue/${issueKey}/comment`,
               {

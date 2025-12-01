@@ -1,0 +1,6 @@
+requests
+gitpython
+openai
+tenacity
+PyJWT
+cryptography
